@@ -1,0 +1,139 @@
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url(img/img-9.jpg) center center no-repeat;
+    block-size: cover;
+}
+
+.loading-area {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-area.done {
+    animation: loadingDone 2s;
+    animation-fill-mode: forwards;
+}
+
+.loading-area span {
+    width: 10px;
+    height: 30px;
+    background: #ee5a24;
+    display: inline-block;
+    margin: 0 2px;
+    border-radius: 10px;
+    animation: loadingAnim 2.5s;
+    animation-iteration-count: infinite;
+}
+
+.loading-area span:nth-child(2) {
+    animation-delay: 0.25s
+}
+
+.loading-area span:nth-child(3) {
+    animation-delay: 0.50s
+}
+
+.loading-area span:nth-child(4) {
+    animation-delay: 0.75s
+}
+
+.loading-area span:nth-child(5) {
+    animation-delay: 1s
+}
+
+@keyframes loadingAnim {
+    0% {
+        height: 30px;
+    }
+    20% {
+        height: 100px;
+    }
+    40% {
+        height: 30px;
+    }
+    100% {
+        height: 30px;
+    }
+}
+
+@keyframes loadingDone {
+    0% {
+        opacity: 1
+    }
+    90% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+/*************************************************** CSS PAGE ***************************************************/
+
+body {
+    background-color: #29282D;
+    font-family: 'Playfair Display', serif;
+    color: whitesmoke;
+}
+
+.cadre {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 70%;
+    /* rabaisser pour media querie plus important */
+}
+
+h1 {
+    color: #e26f1d;
+    text-shadow: 1px 1px black;
+}
+
+hr {
+    color: #F07E2B;
+}
+
+img {
+    width: 150px;
+    border-radius: 100px;
+}
+
+video {
+    position: relative;
+    left: 44%;
+}
+
+
+/* .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+} */
