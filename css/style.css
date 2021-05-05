@@ -347,7 +347,7 @@ a:hover {
     box-shadow: 4px 4px 4px tomato, -4px -4px 4px teal;
 }
 
-iframe {
+footer iframe {
     height: 350px;
     width: 80%;
     border-radius: 50px;
@@ -357,6 +357,14 @@ iframe {
 
 /****************************************************** CSS RESPONSIVE  ******************************************************/
 
+@media all and (max-width: 576px) {
+    .video-responsive iframe {
+        display: none;
+        /*on cache la vidéo dans la version mobile*/
+    }
+    ;
+}
+
 @media all and (min-width: 992px) {
     header {
         height: 600px;
@@ -365,12 +373,22 @@ iframe {
         margin: 0 auto;
         width: 70%;
     }
+    .video-responsive iframe {
+        width: 600px;
+        height: 400px;
+        /*on cache la vidéo dans la version mobile*/
+    }
     ;
 }
 
 @media all and (min-width: 1200px) {
     header {
         height: 800px;
+    }
+    .video-responsive iframe {
+        width: 900px;
+        height: 400px;
+        /*on cache la vidéo dans la version mobile*/
     }
     ;
 }
